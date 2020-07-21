@@ -22,7 +22,7 @@ export class AddWaterReadingComponent implements OnInit {
 	toreading: Number = 0;
 	readingfrom: Number = 0;
 	totalcount: Number = 0;
-	totalcount = this.readingfrom - this.toreading;
+	//totalcount = this.readingfrom - this.toreading;
 
 	ngOnInit() {
 		this.societyMember = this.Members.getMembers();
