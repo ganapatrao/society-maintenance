@@ -1,0 +1,36 @@
+
+<div class="row">
+
+    <div class="col-sm-12">
+      <app-add-water-reading></app-add-water-reading>
+      <hr>
+      <!-- <p>the shopping list</p> -->
+
+
+      <table class="table table-bordered" class="table table-hover">
+                <thead>
+                  <tr style="border: 1px solid cornflowerblue">
+                  <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="cursor:pointer; 
+                  padding:0px; margin:0px; border: 1px solid cornflowerblue;"
+                   *ngFor="let reading of watereading; let i=index" (click)="OnEditItem(i)">
+                    <th scope="row">{{i}}</th> 
+                    <td>{{reading.name}}</td>
+                    <td>{{reading.fromReading}}</td>
+                    <td>{{reading.toReading}}</td>
+                    <td>{{reading.totalReading}}</td>
+                    <td>{{reading.readingDate| date : 'dd-MMM-yyyy'}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>                   
+    </div>
+  </div>
