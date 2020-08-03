@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WaterReadingComponent } from './water/water-reading/water-reading.component';
 import { AddWaterReadingComponent } from './water/add-water-reading/add-water-reading.component';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './router/router.module';
 @NgModule({
-	declarations: [ AppComponent, WaterReadingComponent, AddWaterReadingComponent ],
+	declarations: [AppComponent, WaterReadingComponent, AddWaterReadingComponent],
 	imports: [
 		BrowserModule,
 		FormsModule,
@@ -19,6 +19,6 @@ import { RoutingModule } from './router/router.module';
 		// Formsmodule
 	],
 	providers: [],
-	bootstrap: [ AppComponent ]
+	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

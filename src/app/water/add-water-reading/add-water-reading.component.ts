@@ -8,10 +8,10 @@ import { WaterReading } from '../moterReadingmodel';
 @Component({
 	selector: 'app-add-water-reading',
 	templateUrl: './add-water-reading.component.html',
-	styleUrls: [ './add-water-reading.component.css' ]
+	styleUrls: ['./add-water-reading.component.css']
 })
 export class AddWaterReadingComponent implements OnInit {
-	constructor(private Members: MemberService, private waterReadingservice: WaterReadingService) {}
+	constructor(private Members: MemberService, private waterReadingservice: WaterReadingService) { }
 
 	readingCount = '';
 	@ViewChild('f', { static: false })
@@ -34,7 +34,7 @@ export class AddWaterReadingComponent implements OnInit {
 		//console.log(this.waterreadingform.controls.readingfrom.value);
 		const value = form.value;
 		const units = (value.toreading - value.readingfrom).toFixed(1);
-		//console.log(value.member,value.readingfrom,value.toreading,units)
+		console.log(value.member, value.readingfrom, value.toreading, units)
 		//  const newreading =new WaterReading(form.value.name)
 
 		//console.log(this.selectDate)
@@ -47,5 +47,10 @@ export class AddWaterReadingComponent implements OnInit {
 		);
 		//console.log(newwaterReading); //gtx
 		this.waterReadingservice.addWaterReading(newwaterReading);
+	}
+
+	calculateTotal() {
+		const total = parseFloat((this.waterreadingform.controls.toreading.value - this.waterreadingform.controls.readingfrom.value).toFixed(1));
+		this.totalcount = total;
 	}
 }
