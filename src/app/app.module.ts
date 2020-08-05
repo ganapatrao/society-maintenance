@@ -8,8 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './router/router.module';
+import { GenerateWaterbillComponent } from './app/water/generate-waterbill/generate-waterbill.component';
 @NgModule({
-	declarations: [AppComponent, WaterReadingComponent, AddWaterReadingComponent],
+	declarations: [AppComponent, WaterReadingComponent, AddWaterReadingComponent, GenerateWaterbillComponent],
 	imports: [
 		BrowserModule,
 		FormsModule,
