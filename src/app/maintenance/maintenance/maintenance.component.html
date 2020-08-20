@@ -1,0 +1,42 @@
+<form class="container">
+    <input autocomplete="off" class="form-control" name="year" bsDatepicker [bsConfig]="{dateInputFormat: 'YYYY'}"
+        (onShown)="onOpenCalendar($event)">
+</form>
+<table class="table table-bordered" class="table table-hover">
+    <thead>
+        <tr style="border: 1px solid cornflowerblue">
+            <th scope="col">Name</th>
+            <th scope="col">Jan</th>
+            <th scope="col">Feb</th>
+            <th scope="col">Mar</th>
+            <th scope="col">Apr</th>
+            <th scope="col">May</th>
+            <th scope="col">Jun</th>
+            <th scope="col">July</th>
+            <th scope="col">Aug</th>
+            <th scope="col">Sep</th>
+            <th scope="col">Oct</th>
+            <th scope="col">Nov</th>
+            <th scope="col">Dec</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="cursor:pointer; 
+            padding:0px; margin:0px; border: 1px solid cornflowerblue;"
+            *ngFor="let user_year_entry of user_year_entries">
+            <td>{{user_year_entry.name}}</td>
+            <td [className]="user_year_entry.monthtracking[0] ? 'bg-success' : 'bg-danger'">P</td>
+            <td [className]="user_year_entry.monthtracking[1] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[2] ? 'bg-success' : 'bg-danger'">P</td>
+            <td [className]="user_year_entry.monthtracking[3] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[4] ? 'bg-success' : 'bg-danger'">P</td>
+            <td [className]="user_year_entry.monthtracking[5] ? 'bg-success' : 'bg-danger'">P</td>
+            <td [className]="user_year_entry.monthtracking[6] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[7] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[8] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[9] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[10] ? 'bg-success' : 'bg-danger'">N</td>
+            <td [className]="user_year_entry.monthtracking[11] ? 'bg-success' : 'bg-danger'"></td>
+        </tr>
+    </tbody>
+</table>

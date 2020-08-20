@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Members } from './Membermodel';
+import { UserMaintenance } from './UserMaintenancemodel';
 
 @Injectable({
 	providedIn: 'root'
@@ -13,9 +14,20 @@ export class MemberService {
 	];
 	//[new Members('Tinaikar')]
 
-	constructor() {}
+	private MembersMaintenanceRecords: UserMaintenance[] = [
+		{ id: 1, name: 'pednekar', monthtracking: [true, true, false, false] },
+		{ id: 2, name: 'Tinaikar', monthtracking: [true, true, true, false] },
+		{ id: 3, name: 'Dessai', monthtracking: [true, true, false, false] },
+		{ id: 4, name: 'Rane', monthtracking: [true, true, true, false] }
+	];
+
+	constructor() { }
 
 	getMembers() {
 		return this.SocietyMembers;
+	}
+
+	getMembersMaintenanceRecords(year = 2020) {
+		return this.MembersMaintenanceRecords;
 	}
 }

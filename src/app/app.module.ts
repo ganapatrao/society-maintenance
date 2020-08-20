@@ -9,9 +9,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './router/router.module';
 import { GenerateWaterbillComponent } from './water/generate-waterbill/generate-waterbill.component';
+import { MaintenanceComponent } from './maintenance/maintenance/maintenance.component';
 //import { GenerateWaterbillComponent } from './app/water/generate-waterbill/generate-waterbill.component';
 @NgModule({
-	declarations: [AppComponent, WaterReadingComponent, AddWaterReadingComponent, GenerateWaterbillComponent],
+	declarations: [AppComponent, WaterReadingComponent, AddWaterReadingComponent, GenerateWaterbillComponent, MaintenanceComponent],
 	imports: [
 		BrowserModule,
 		FormsModule,
